@@ -1,0 +1,17 @@
+.mobile{
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: gray;
+    color: white;
+
+    right: -50%;   
+    /* 오른쪽으로부터  50% 나와라 */
+    transition: 1s;
+}
+.mobile.active{
+    right: 0;
+}

@@ -1,0 +1,24 @@
+npx create-next-app .
+npm i framer-motion react-strap
+
+npm i react-bootstrap bootstrap
+
+(react-strap 혹은 react-bootstrap bootstrap 사용함)
+
+
+bootstrap : bootstrap이란 website를 쉽게 만들어 주는 css, js framework.
+            하나의 code로 휴대폰, 태블릿, 데스크 탑까지 다양한 기기에서 작동할 수 있게함
+               ==> web-site 제작, 유지, 보수할 수 있게 해줌.
+
+reactstrap : bootstrap을 react에서 더 쉽게 사용하기 위한 framework
+             reactstrap은 css가 포함되어 있지 않아서 bootstrap도 같이 설치함
+
+reactstrap 사용법 : 
+
+       (1) cmd 창에 차례대로 아래 명령어 입력
+          npm install--save reactstrap
+          npm install--save bootstrap
+
+       (2) App.js 상단에 bootstrap css import
+           import React from 'react'
+           import 'bootstrap/dist/css/bootstrap.css'
