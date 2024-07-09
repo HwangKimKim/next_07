@@ -8,10 +8,13 @@ const nextConfig = {
             },
             {
                 protocol: 'https',
-                hostname: 'plus.unsplash.com'
+                hostname: 'images.unsplash.com'
             }
         ]
-    }
+    },
+    experimental : {
+        missingSuspenseWithCSRBailout: false,
+    },
 };
 
 export default nextConfig;
