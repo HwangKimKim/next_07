@@ -76,7 +76,7 @@ const Navbars = () => {
       {/* <div className='hidden sm: block '> */}
       <div > 
           {
-            navMenus.map( menu=> <Link href={ menu.path }  className='p-5'> { menu.title } </Link>)
+            navMenus.map( menu=> <Link href={ menu.path }  key={menu.title} className='p-5'> { menu.title } </Link>)
           }
 
           {
