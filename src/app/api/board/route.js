@@ -34,14 +34,8 @@ import path from 'path'
 
 export async function POST(request){
 
-    const formData = await request.formData(); // 
-    // console.log( formData )
-    // FormData {
-    //     [Symbol(state)]: [
-    //         { name: 'title', value: 'CSR' },
-    //         { name: 'body', value: 'client side  rendering' }
-    //     ]
-    // }
+    const formData = await request.formData(); 
+
      
     const { title , content } = Object.fromEntries( formData )
 
@@ -53,7 +47,8 @@ export async function POST(request){
     return Response.json( null, {
         status : 302,
         headers : {
-            Location : '/board'
+            // Location : '/board' => git-vercel에 배포하면 board/create에 data가 올려지지 않음
+            Location : 'https://next-07-rbf3.vercel.app/board'
         }
     })
 }

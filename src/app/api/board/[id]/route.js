@@ -41,7 +41,14 @@ export async function PUT(request, { params }){
     // 
     fs.writeFileSync(filePath, `export const boards = ${JSON.stringify(boards, null, 4)}`, 'utf-8')
 
-    return Response.json(updateBoard)
+    // return Response.json(updateBoard)
+    return Response.json( null, {
+        status : 302,
+        headers : {
+            // Location : '/board' => git-vercel에 배포하면 board/create에 data가 올려지지 않음
+            Location : 'https://next-07-rbf3.vercel.app/board'
+        }
+    })
 }
 
 export async function DELETE(request, { params }){
@@ -55,7 +62,15 @@ export async function DELETE(request, { params }){
     // 
     fs.writeFileSync(filePath, `export const boards = ${JSON.stringify(boards, null, 4)}`, 'utf-8')
 
-    return Response.json(deleted[0])
+    // return Response.json(deleted[0])
+    return Response.json( null, {
+        status : 302,
+        headers : {
+            // Location : '/board' => git-vercel에 배포하면 board/create에 data가 올려지지 않음
+            Location : 'https://next-07-rbf3.vercel.app/board'
+        }
+    })
+
 }
 
  
