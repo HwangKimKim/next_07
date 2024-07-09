@@ -8,7 +8,8 @@ const DeleteBtn = ({ id }) => {
   const router = useRouter();
 
   const deleteBoardId = async (id)=>{
-    const url = `http://localhost:3000/api/board/${id}`
+    const url = `https://next-07-rbf3.vercel.app//api/board/${id}`
+    // const url = `http://localhost:3000/api/board/${id}`
     const res = await fetch(url, { method : "DELETE"}); 
 
     if( res.ok ){

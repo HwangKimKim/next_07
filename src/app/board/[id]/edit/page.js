@@ -26,7 +26,8 @@ const Edit = ({ params }) => {
   }
 
   useEffect(()=>{
-        fetch(`http://localhost:3000/api/board/${id}`)
+        fetch(`https://next-07-rbf3.vercel.app/api/board/${id}`)
+        // fetch(`http://localhost:3000/api/board/${id}`)
         .then(res=>res.json())
         .then(res=>{
             setBoard(res)
@@ -52,7 +53,7 @@ const Edit = ({ params }) => {
   }
 
   const editSaveHandle = ()=>{
-        fetch(`http://localhost:3000/api/board/${id}`, {
+        fetch(`https://next-07-rbf3.vercel.app/api/board/${id}`, {
             method : 'PUT',
             headers : { 'Content-type' : 'application/json;charset=utf8'},
             body: JSON.stringify(board)

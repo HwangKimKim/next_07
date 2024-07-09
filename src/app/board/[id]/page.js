@@ -23,7 +23,7 @@ export const generateMetadata = ({params})=>{
 // localhost:3000/board/2
 // localhost:3000/board/3
 const getBoardId = async (id)=>{
-    const url = `http://localhost:3000/api/board/${id}`
+    const url = `https://next-07-rbf3.vercel.app/api/board/${id}`
     const res = await fetch(url);
     const boardId = await res.json();
     return boardId
